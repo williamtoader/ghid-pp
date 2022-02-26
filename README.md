@@ -5,11 +5,143 @@ O să pun câteva indicații la problemele date.
 
 În fișierul `cheats.py` voi pune cateva secvențe de cod care pot fi utile.
 
-Set de probleme dat la examenul de anul acesta:
-
+# Set de probleme dat la examenul de anul acesta:
 (Work in progress)
 
-Set de probleme dat la examenele din anii trecuți:
+## Proba 1
+
+
+### Problema 1
+Să se determine toate datele palindrom din secolul 21 (in orice ordine).
+Exemple (cateva date palindrom): 10.02.2001, 20.02.2002, 01.02.2010, ..., 13.02.2031, 29.02.2092
+
+### Problema 2
+
+Din fisierul studenti.txt se citesc, pe cate o linie, separate prin virgula si un singur spatiu, urmatoarele date despre un student:
+
+- cnp;
+- nume si prenume;
+- un sir de perechi nota – numar de credite;  
+  
+Scrieti o functie cu un numar variabil de argumente numite prin care sa se afiseze in fisierul rezultate.out, pentru fiecare student, pe cate o linie, numele si numarul de credite acumulate. Pentru a lua numarul de credite aferent unui examen este necesara promovarea lui.
+
+Exemplu:
+```
+INPUT
+
+studenti.txt
+
+6030303100600, Crisan Maria, 10 - 4, 9 - 4, 10 - 3, 9 - 4
+5030303100870, Florea Dorin, 10 - 3, 9 - 3, 10 - 4, 8 - 4, 10 - 2
+5021218123456, Manaila Alin, 7 - 4, 4 - 3, 9 - 3, 8 - 3, 6 - 3
+6021027456456, Toader Georgiana, 4 - 3, 4 - 4, 8 - 4, 8 - 3, 6 - 2
+
+OUTPUT
+
+rezultate.txt
+
+030303100600, Crisan Maria, 15
+5030303100870, Florea Dorin, 16
+5021218123456, Manaila Alin, 13
+6021027456456, Toader Georgiana, 9
+```
+
+### Problema 3
+Din fișierul sarbatori.txt se citesc următoarele informații (in aceasta forma):
+```
+01.01        Vasile, Vasilica
+07.01        Ioan, Ion, Ioana
+30.01        Grigore
+10.02        Valentin, Valentina, Vali
+23.04        Gheorghe, Georgeta, Gica, Geta
+21.05        Elena, Constantin, Costel, Costin, Cosmin, Lenuta, Ilinca
+29.06        Petru, Pavel, Petrica
+12.07        Veronica
+20.07        Ilie
+30.08        Alex, Alexandru, Alexandra
+08.09        Maria, Marian
+08.11        Mihai, Gabriel, Gabi, Mihaita
+06.12        Nicolae, Nicoleta, Nicu, Nicusor
+07.12        Filofteia
+27.12        Stefan, Stefania
+```
+
+O regulă stabilită în M&K Company este ca, în oricare zi ce se regăsește în fișierul sarbatori.txt să se acorde fiecărui angajat sărbatorit (ce are unul dintre prenume ce apare în fișier, în dreptul sărbătorii) un bonus echivalent cu 10% din salariul lunar.
+
+Se citesc de la tastatură, de pe o singura linie, numele de familie, toate prenumele și salariul unui angajat, separate prin cate un spatiu. Să se verifice dacă astăzi (data curentă) angajatul primește sau nu bonus, astfel:
+
+- în cazul în care ziua este una obișnuită (nu apare în fișierul sarbatori.txt) se va afișa mesajul Zi fara bonusuri;
+- dacă data current apare printre cele din fișier, atunci se va afișa mesajul: Angajatul…(nume prenume) primeste astazi un bonus de ..(suma calculata, acel 10% din salariu).. de lei.
+
+Exemplu:
+
+INPUT  
+Georgescu Marian Grigore  4000
+
+OUTPUT  
+Dacă data curentă este 04 feb. 2022, atunci se va afisa mesajul  
+`Zi fara bonusuri.`  
+Dacă data curenta este 30 ian. 2022, atunci se va afisa mesajul  
+`Angajatul Georgescu Marina Grigore primeste astazi un bonus de 400 de lei.`  
+
+### Problema 4
+Se citeste n de la tastatura. Gigel și George generează aleator cȃte o listă de n numere de maxim 4 cifre. Cȃștigă cel care are ȋn listă mai puține numere prime. Se joacă 3 runde. Determinaţi cine este cȃștigătorul după 3 runde (afisare in consola).\
+
+### Problema 5
+Pentru firma P&G  se organizează o tombolă. Din fisierul angajati.in se citesc, de pe cate o linie a fisierului, numele si prenumele cate unui angajat. Se citeste de la tastatura un numar natural k, mai mic decat numarul liniilor din fisierul angajati.in. Să se afiseze in fisierul extragere.out k nume diferite de angajati, la intamplare, din cele existente in fisierul angajate.in.  
+
+Exemplu:  
+Daca fisierul angajati.in contine  
+
+```
+Jercan Elena
+Ion Horia
+Marin Ioana-Daniela
+Neagoe Marina
+Florescu Teodora
+Popa Diana
+Radu Tatiana
+```
+si k = 4, atunci fisierul extragere.out poate contine  
+
+```
+Neagoe Marina
+Popa Diana
+Radu Tatiana
+Ion Horia
+```
+
+## Proba 2
+
+### Problema 1
+a) Scrieti o functie care verifica daca un numar natural, primit ca parametru, este sau nu palindrom.
+
+b) Din fișierul numere.txt se citesc numere naturale, separate prin virgula si/sau spatii/pe mai multe linii. Apeland functia scrisa la punctul a) si folosind metoda Divide et Impera să se determine cate numere palindrom sunt in fisier. Rezultatul se afiseaza in consola.
+
+### Problema 2
+Din fisierul “date.txt” se citesc numere intregi (asezate pe mai multe linii). Se citeste de la tastatura un numar intreg S. Să se determine, folosind un algoritm de complexitate O(n log n), utilizand metoda Divide et Impera, doua numere naturale din sir, T1 si T2, cu proprietatea ca T1 + T2 = S. Se garanteaza ca exista o pereche unica T1, T2 cu proprietatea ceruta. Afisarea se va face in fisieul “date.out”. (Indiciu: cautare binara).
+
+Exemplu:
+
+INPUT  
+date.txt  
+```
+2   4   8  -5
+-20  13   1   3
+```  
+consola  
+```
+7
+```  
+OUTPUT  
+date.out  
+```
+3   4
+```
+
+---
+
+# Set de probleme dat la examenele din anii trecuți:
 
 ### Problema 1
 
